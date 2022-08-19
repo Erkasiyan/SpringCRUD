@@ -33,7 +33,7 @@
 </style>
 </head>
 <body>
-	<div id="root">
+	<div id="root" style="margin-top: 50px; text-align: center;">
 		<header>
 			<h1>게시판</h1>
 		</header>
@@ -77,6 +77,7 @@
 					
 					<button id="searchBtn" type="button">검색</button>
 				</div>	
+			<hr/>	
 				<div>
 					<ul>
 				<c:if test="${pageMaker.prev}">

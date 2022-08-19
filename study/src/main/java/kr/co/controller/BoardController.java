@@ -21,9 +21,12 @@ public class BoardController {
 	BoardService service;
 	
 	// 게시판 글 작성 화면
-	@RequestMapping(value = "/board/writeView", method = RequestMethod.GET)
-	public void writeView() throws Exception{
+	@RequestMapping("/writeView")
+	public ModelAndView writeView(ModelAndView mv) throws Exception{
 		logger.info("writeView");
+		
+		mv.setViewName("board/writeView");
+		return mv;
 	}
 	
 	// 게시판 글 작성
@@ -54,12 +57,14 @@ public class BoardController {
 	}
 	
 	// 게시물 조회
-	@RequestMapping(value = "/readView", method = RequestMethod.POST)
-	public String read(BoardVO bVO, Model model) throws Exception{
+	@RequestMapping("/readView")
+	public ModelAndView read(BoardVO bVO, ModelAndView mv) throws Exception{
 		logger.info("read");
 		
-		model.addAttribute("read", service.read(bVO.getBno()));
-		return "board/readView";
+		mv.addObject("read", service.read(bVO.getBno()));
+		mv.setViewName("board/readView");
+		
+		return mv;
 	}
 	
 	// 게시판 수정뷰
