@@ -33,7 +33,7 @@
 </style>
 </head>
 <body>
-	<div id="root" style="margin-top: 50px; text-align: center;">
+	<div id="root" style="display: inline-block; width:900px; text-align: center;">
 		<header>
 			<h1>게시판</h1>
 		</header>
@@ -46,7 +46,7 @@
 		
 		<section id="container">
 			<form id="frm" method="post" action="">
-				<input type="text" name="bno" id="bno">
+				<input type="hidden" name="bno" id="bno">
 				<table>
 					<tr>
 						<th>번호</th>

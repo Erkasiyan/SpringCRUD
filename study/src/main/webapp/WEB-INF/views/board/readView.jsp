@@ -46,7 +46,7 @@
 		<hr />
 		
 		<section id="container">
-			<form id="frm" method="post">
+			<form id="frm" role="form" method="post">
 				<input class="title" type="hidden" id="bno" name="bno" value="${read.bno}">
 			</form>
 				<table>
